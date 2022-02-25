@@ -17,6 +17,15 @@ module.exports = {
         client.login(TOKEN)
         client.on("ready", () => {
 
+            console.log(`Logged in as ${client.user.tag}`);
+            client.user.setPresence({
+                status: 'dnd',
+                activities: [{
+                    type: 'LISTENING',
+                    name: 'RADIO FARDA',
+                }]
+            });
+
             let SERVER = client.guilds.cache.get(guildID)
 
             const connection = voiceDiscord.joinVoiceChannel({
