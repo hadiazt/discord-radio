@@ -1,5 +1,5 @@
 {
-  "name": "discord-radio-station",
+  "name": "discord-radio",
   "version": "0.0.1",
   "description": "discord radio stations",
   "main": "./src/index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hadiazt/discord-radio-station.git"
+    "url": "git+https://github.com/hadiazt/discord-radio.git"
   },
   "keywords": [
     "discord",
@@ -22,9 +22,9 @@
   "author": "hadi.az",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hadiazt/discord-radio-station/issues"
+    "url": "https://github.com/hadiazt/discord-radio/issues"
   },
-  "homepage": "https://github.com/hadiazt/discord-radio-station#readme",
+  "homepage": "https://github.com/hadiazt/discord-radio#readme",
   "devDependencies": {
     "node": "^16.6.1"
   },
