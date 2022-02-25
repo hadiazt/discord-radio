@@ -1,0 +1,38 @@
+{
+  "name": "discord-radio-station",
+  "version": "0.0.1",
+  "description": "discord radio stations",
+  "main": "./index.test.js",
+  "scripts": {
+    "start": "node .",
+    "node-update": "npm i --save-dev node@16 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH",
+    "node-clean": "rm -rf node_modules && rm package-lock.json && npm cache clear --force && npm cache clean --force && npm i",
+    "node-update-then-clean": "npm run node-update && npm run node-clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hadiazt/discord-radio-station.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "music",
+    "radio"
+  ],
+  "author": "hadi.az",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hadiazt/discord-radio-station/issues"
+  },
+  "homepage": "https://github.com/hadiazt/discord-radio-station#readme",
+  "devDependencies": {
+    "node": "^16.6.1"
+  },
+  "dependencies": {
+    "@discordjs/voice": "^0.7.5",
+    "discord.js": "^13.6.0",
+    "ffmpeg-static": "^4.4.1",
+    "opusscript": "^0.0.8",
+    "libsodium-wrappers": "^0.7.9"
+  }
+}
