@@ -2,7 +2,7 @@
   "name": "discord-radio-station",
   "version": "0.0.1",
   "description": "discord radio stations",
-  "main": "./index.test.js",
+  "main": "./src/index.js",
   "scripts": {
     "start": "node .",
     "node-update": "npm i --save-dev node@16 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH",
