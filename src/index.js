@@ -37,7 +37,7 @@ module.exports = {
     },
 
     JAVAN: function ({ channelID, guildID, logID, TOKEN }) {
-        const { JAVAN } = require('./stations/JAVAN.js')
+        const { JAVAN } = require('./stations/javan.js')
         JAVAN({ channelID, guildID, logID, TOKEN })
     },
 
