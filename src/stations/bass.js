@@ -43,7 +43,7 @@ module.exports = {
 
             player.on(voiceDiscord.AudioPlayerStatus.Idle, () => {
                 const EMBED = new MessageEmbed()
-                    .setTitle('There is currently no resource for the player to be playing')
+                    .setTitle('There is currently no resource for the player to be playing (Trying to replay the resource)')
                     .setThumbnail(client.user.displayAvatarURL({ format: 'png', size: 2048 }))
                     .setDescription(`Powered By : ${[name]}${(homepage)}`)
                     .setTimestamp()
