@@ -12,17 +12,17 @@ const client = new Client({
 });
 
 module.exports = {
-    ARAB: function ({ channelID, guildID, logID, TOKEN }) {
+    ARAB: function ({ channelID, guildID, logID, TOKEN, Presence: { status, type, name }  }) {
 
         client.login(TOKEN)
         client.on("ready", () => {
 
             console.log(`Logged in as ${client.user.tag}`);
             client.user.setPresence({
-                status: 'dnd',
+                status: status || 'dnd',
                 activities: [{
-                    type: 'LISTENING',
-                    name: 'ARAB STATION',
+                    type: type || 'LISTENING',
+                    name: name || 'ARAB STATION',
                 }]
             });
 
