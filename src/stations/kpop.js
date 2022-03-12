@@ -12,17 +12,17 @@ const client = new Client({
 });
 
 module.exports = {
-    KPOP: function ({ channelID, guildID, logID, TOKEN }) {
+    KPOP: function ({ channelID, guildID, logID, TOKEN, Presence: { status, type, name } }) {
 
         client.login(TOKEN)
         client.on("ready", () => {
 
             console.log(`Logged in as ${client.user.tag}`);
             client.user.setPresence({
-                status: 'dnd',
+                status: status || 'dnd',
                 activities: [{
-                    type: 'LISTENING',
-                    name: 'KPOP STATION',
+                    type: type || 'LISTENING',
+                    name: name || 'KPOP STATION',
                 }]
             });
 
