@@ -48,7 +48,8 @@ module.exports = {
                     .setDescription(`Powered By : ${[name]}${(homepage)}`)
                     .setTimestamp()
 
-                connection.destroy();
+                player.play(resource);
+                connection.subscribe(player);
                 client.channels.cache.get(logID).send({ embeds: [EMBED] });
             });
         })
