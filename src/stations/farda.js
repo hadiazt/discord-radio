@@ -12,17 +12,17 @@ const client = new Client({
 });
 
 module.exports = {
-    FARDA: function ({ channelID, guildID, logID, TOKEN }) {
+    FARDA: function ({ channelID, guildID, logID, TOKEN, Presence: { status, type, name } }) {
 
         client.login(TOKEN)
         client.on("ready", () => {
 
             console.log(`Logged in as ${client.user.tag}`);
             client.user.setPresence({
-                status: 'dnd',
+                status: status || 'dnd',
                 activities: [{
-                    type: 'LISTENING',
-                    name: 'RADIO FARDA',
+                    type: type || 'LISTENING',
+                    name: name || 'RADIO FARDA',
                 }]
             });
 
