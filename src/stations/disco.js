@@ -12,17 +12,17 @@ const client = new Client({
 });
 
 module.exports = {
-    DISCO: function ({ channelID, guildID, logID, TOKEN }) {
+    DISCO: function ({ channelID, guildID, logID, TOKEN, Presence: { status, type, name } }) {
 
         client.login(TOKEN)
         client.on("ready", () => {
 
             console.log(`Logged in as ${client.user.tag}`);
             client.user.setPresence({
-                status: 'dnd',
+                status: status || 'dnd',
                 activities: [{
-                    type: 'LISTENING',
-                    name: 'DISCO STATION',
+                    type: type || 'LISTENING',
+                    name: name || 'DISCO STATION',
                 }]
             });
 
