@@ -1,17 +1,27 @@
-const { KPOP , JAZZ } = require('discord-radio')
+const { KPOP, JAZZ } = require('discord-radio')
 
 KPOP({
     channelID: 'VOICE_ID',
     guildID: 'SERVER_ID',
     logID: 'LOG_CHANNEL_ID',
-    TOKEN: 'YOUR_BOT_TOKEN'
+    TOKEN: 'YOUR_BOT_TOKEN',
+    Presence: {
+        status: 'dnd',
+        type: 'LISTENING',
+        name: 'ROCK STATION',
+    }
 })
 
 JAZZ({
     channelID: 'VOICE_ID',
     guildID: 'SERVER_ID',
     logID: 'LOG_CHANNEL_ID',
-    TOKEN: 'YOUR_BOT_TOKEN'
+    TOKEN: 'YOUR_BOT_TOKEN',
+    Presence: {
+        status: 'dnd',
+        type: 'LISTENING',
+        name: 'ROCK STATION',
+    }
 })
 
 // --------- OR --------- //
@@ -22,14 +32,24 @@ RADIO.JAZZ({
     channelID: 'VOICE_ID',
     guildID: 'SERVER_ID',
     logID: 'LOG_CHANNEL_ID',
-    TOKEN: 'YOUR_BOT_TOKEN'
+    TOKEN: 'YOUR_BOT_TOKEN',
+    Presence: {
+        status: 'dnd',
+        type: 'LISTENING',
+        name: 'ROCK STATION',
+    }
 })
 
 RADIO.POP({
     channelID: 'VOICE_ID',
     guildID: 'SERVER_ID',
     logID: 'LOG_CHANNEL_ID',
-    TOKEN: 'YOUR_BOT_TOKEN'
+    TOKEN: 'YOUR_BOT_TOKEN',
+    Presence: {
+        status: 'dnd',
+        type: 'LISTENING',
+        name: 'ROCK STATION',
+    }
 })
 
 /************************************
