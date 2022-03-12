@@ -12,17 +12,17 @@ const client = new Client({
 });
 
 module.exports = {
-    POP: function ({ channelID, guildID, logID, TOKEN }) {
+    POP: function ({ channelID, guildID, logID, TOKEN, Presence: { status, type, name } }) {
 
         client.login(TOKEN)
         client.on("ready", () => {
 
             console.log(`Logged in as ${client.user.tag}`);
             client.user.setPresence({
-                status: 'dnd',
+                status: status || 'dnd',
                 activities: [{
-                    type: 'LISTENING',
-                    name: 'POP STATION',
+                    type: type || 'LISTENING',
+                    name: name || 'POP STATION',
                 }]
             });
 
